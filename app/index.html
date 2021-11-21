@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,111 @@
     <link rel="stylesheet" href="css/style.min.css">
     <title>Document</title>
 </head>
+
 <body>
-    <p class="text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aliquid distinctio recusandae officia, quas, corporis doloribus sequi voluptate nisi accusamus, ex laboriosam deleniti. Voluptatum atque blanditiis explicabo autem, non aut!
-    </p>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__menu">
+                    <nav class="menu">
+                        <ul class="menu__contacts-list">
+                            <li class="menu__contacts-item">
+                                <a class="menu__contacts-link menu__contacts-link--address" href="#"> Адрес и время доставки </a>
+                            </li>
+                            <li class="menu__contacts-item">
+                                <a class="menu__contacts-link menu__contacts-link--tel" href="#"> Горячая линия 24/7 </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="menu">
+                        <ul class="menu__main-list">
+                            <li class="menu__main-item">
+                                <a class="menu__main-link" href="#"> Доставка</a>
+                            </li>
+                            <li class="menu__main-item">
+                                <a class="menu__main-link" href="#"> О нас </a>
+                            </li>
+                            <li class="menu__main-item">
+                                <a class="menu__main-link" href="#"> Новости </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header__inner">
+            <div class="container">
+                <div class="header__inner-box">
+                    <a class="logo" href="#">
+                        <img class="logo__img" src="images/logo.svg" alt="Логотип">
+                    </a>
+                    
+                    <nav class="catalog">
+                        <button class="catalog__btn" onclick="myFunction()" type="button"> <span class=sub__btn> </span> Каталог товаров </button>
+                        <ul class="catalog__menu-list">
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Овощи и фрукты</a>
+                            </li>
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Бакалея </a>
+                            </li>
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Молочные продукты</a>
+                            </li>
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Хлеб </a>
+                            </li>
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Мясо </a>
+                            </li>
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Колбаса</a>
+                            </li>
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Рыба </a>
+                            </li>
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Алкоголь </a>
+                            </li>
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Напитки </a>
+                            </li>
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Торты </a>
+                            </li>
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Мясо </a>
+                            </li>
+                            <li class="catalog__menu-item">
+                                <a class="catalog__menu-link" href="#"> Чай, кофе</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search">
+                        <input class="search__main" type="text" placeholder="Найти в магазине...">
+                        <button class="search__btn"> Поиск </button>
+                    </div>
+                    <div class="user-nav">
+                        <a class="user-nav__link" href="">
+                            <img class="user-nav__link-img" src="images/user-link.svg" alt="Иконка личный кабинет">
+                        </a>
+                        <a class="user-nav__link" href="">
+                            <img class="user-nav__link-img" src="images/icon-heart.svg" alt="Иконка фавориты">
+                            <span class="user-nav__num"> 12 </span>
+                        </a>
+                        <a class="user-nav__link" href="">
+                            <img class="user-nav__link-img" src="images/icon-cart.svg" alt="Иконка корзина">
+                            <span class="user-nav__num"> 12 </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    
 
- 
-<script src="js/main.min.js"></script>
+
+    <script src="js/main.min.js"></script>
 </body>
+
 </html>
