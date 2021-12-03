@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -57,7 +58,7 @@
 .menu__contacts-link::before {
     content: "";
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     background-position: left top;
     background-repeat: no-repeat;
@@ -68,6 +69,8 @@
     background-image: url('../images/icon-del-address.svg');
     width: 32px;
     height: 22px;
+    top: -5px;
+    left: -10px;
 }
 .menu__contacts-link--tel::before {
     background-image: url('../images/icon-tel.svg');
@@ -85,8 +88,9 @@
 
 .catalog {
     position: relative;
-    max-width: 240px;
-    width: 100%;
+    width: 240px;
+    max-width: 100%;
+    margin-right: 30px;
     &__btn{
     font-weight: 600;
     padding: 15px 38px 15px 61px;
@@ -168,12 +172,18 @@
         padding: 15px 52px;
         background-color: #000;
         color: #fff;
-        border: none;
         border-radius: 0 6px 6px 0;
         cursor: pointer;
-        margin-right: 58px;
+        margin-right: 35px;
         &:hover{
             background-color: #31352BD9;
+        }
+        &:focus{
+            box-shadow: inset 0 0 0 4px #E0EDCF;
+        }
+        &:active{
+            background-color:rgba(49, 53, 43, 1);           
+            box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
         }
     }
 }
@@ -194,16 +204,26 @@
 .user-nav {
     display: flex;
     align-items: center;
-    &__link:not(:last-child){
-        margin-right: 27px;
-    }
     &__link{
         position: relative;
     }
+    &__link-img{
+        padding: 9px 13px;
+        &:hover{
+            background-color:rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+        &:focus{
+            border: 3px solid #E0EDCF;
+        }
+        &:active{
+            opacity: 0.2;
+        }
+    }
     &__num{
         position: absolute;
-        top: -8px;
-        left: -9px;
+        top: 0px;
+        left: 5px;
         width: 18px;
         height: 18px;
         border-radius: 50%;
@@ -250,6 +270,15 @@
             font-size: 12px;
             text-transform: uppercase;
             border-radius: 0 6px 6px 0;
+            &:hover{
+                background-color: #4D800C;
+            }
+            &:focus{
+                box-shadow: inset 0 0 0 4px #E0EDCF;
+            }
+            &:active{
+                box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+            }
         }
     }
     &__menu{
@@ -296,14 +325,284 @@
     
 }
 
+.logo{
+    margin-right: 25px;
+}
+
 .logo__footer{
     margin-bottom: 30px;
 }
 
+.top-slider{
+    &__inner{
+        display: flex;
+        justify-content: center;
+    }
+    &__inner--first,
+    &__inner--second,
+    &__inner--third {
+    height: 600px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center; это работает!! понять, почему там инлайн
+    }
+    &__item{
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 24px 0;
+    }
+    &__content{
+        max-width: 780px;
+        width: 100%;
+        padding: 0 24px;
+        color: $title;
+    }
+    &__content p{
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+    &__title{
+        @extend %ruda-900;
+        font-size: 60px;
+        line-height: 1.3;
+        text-transform: uppercase;
+        &__subtitle{
+            font-weight: 700;
+            color: rgba(207, 62, 59, 1);
+            display: block;
+        }
+    }
+    &__btn{
+        background-color: transparent;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+    }
+    &__next{
+        right: 2%;
+    }
+    &__prev{
+        left: 100px;
+    }
+}
+
+.link {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 6px;
+    display: inline-block;
+    background-color: $accent;
+}
+.link--products{
+    background-color: #fff;
+    border: 1px solid $accent;
+    color: $accent;
+    &:hover{
+        background-color: rgba(239, 246, 231, 1);
+    }
+    &:focus{
+        box-shadow: 0 4px 4px #E0EDCF;
+    }
+    &:active{
+        box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.info{
+    background-color: #F6F6F6;
+    padding: 48px 0 29px;
+}
+.info-inner{
+    display: flex;
+    justify-content: center;
+    &__item{
+        width: 265px;
+        max-width: 100%;
+        padding-left: 64px;
+        position: relative;
+    }
+    &__item::before{
+        content: "";
+        position: absolute;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        left: 0;
+    }
+    &__item:not(:last-child){
+        margin-right: 65px;
+    }
+    &__item p{
+        @extend %opensans-400;
+        color: $title;
+        padding-right: 17px;
+    }
+    &__title{
+        color: #121212;
+        @extend %opensans-600;
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    &__item--scooter::before{
+        background-image: url('../images/scooter.svg');
+    }
+    &__item--return::before{
+        background-image: url('../images/return.svg');
+    }
+    &__item--hours::before{
+        background-image: url('../images/24-hours.svg');
+    }
+    
+}
+
+.title{
+    @extend %ruda-600;
+    font-size: 32px;
+    margin-bottom: 30px;  
+    
+}
+
+.products{
+    padding: 72px 0;
+    text-align: center;  
+    &__list{
+        display: flex;
+        justify-content: center;
+        @extend %opensans-700;
+        font-size: 15px;
+        color: $title;
+        margin-bottom: 50px;
+    }
+    &__item:not(:last-child){
+        margin-right: 24px;
+    }
+    &__btn-filter{
+        text-transform: uppercase;
+        background: transparent;
+        color: $title;
+        &:hover{
+            color: #63A60E;
+        }
+        &:focus{
+            box-shadow: inset 0 0 0 4px #E0EDCF; 
+            border-radius: 6px;
+            border: none;
+        }
+        &:active{
+            box-shadow: none;
+            border-bottom: 3px solid #E0EDCF;
+            border-radius: 0;
+        }
+    }
+    &__inner{
+        margin-bottom: 48px;
+        align-items: flex-start;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 28px 30px;
+    }
+    &__card{
+       border: 1px solid #C1C1C1;
+       border-radius: 6px; 
+       padding: 57px 0 18px;
+       max-width: 300px;
+       width: 100%;
+       height: 410px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       position: relative;
+       text-align: start;
+    }
+    &__card::after{
+        content: "";
+        position: absolute;
+        background-size: contain;
+        background-position: top left;
+        background-repeat: no-repeat;
+        top: 12px;
+        left: 12px;
+    }
+    &__card::before{
+        content: "";
+        position: absolute;
+        background-size: contain;
+        background-position: top left;
+        background-repeat: no-repeat;
+    }
+    &__card--new::after{
+        background-image: url('../images/new.svg');
+        width: 66px;
+        height: 16px;  
+    }
+    &__card--sale::after{
+        background-image: url('../images/sale.svg');
+        width: 37px;
+        height: 16px;
+    }
+    &__card--sale-first::before{
+        background-image: url('../images/sale.svg');
+        width: 37px;
+        height: 16px;
+        left: 12px;
+        top: 34px;
+    }
+    &__card--hit::after{
+        background-image: url('../images/hit.svg');
+        width: 34px;
+        height: 16px;
+    }
+    &__card--fav::before{
+        background-image: url('../images/icons/icon-heart.svg');
+        width: 32px;
+        height: 28px;
+        top: 17px;
+        right: 12px;
+        cursor: pointer;
+    }
+    &__link-img{
+        display: inline-block;
+        margin-bottom: 18px;
+    }
+    &__link-title{
+        display: block;
+        padding: 0 18px;
+    }
+    &__card-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 18px;
+    }
+    &__btn{
+        position: relative;
+        width: 32px;
+        height: 32px;
+        background-color: $accent;
+        border-radius: 3px;
+    }
+    &__btn::after{
+        content: "";
+        position: absolute;
+        background-image: url('../images/icons/icon-card.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 32px;
+        height: 32px;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+.mixitup-control-active{
+    border-bottom: 3px solid #E0EDCF;
+}
 
 
-
-
-
-
-@import 'media';
+@import 'media'; 

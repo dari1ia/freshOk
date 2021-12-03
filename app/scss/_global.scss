@@ -3,12 +3,16 @@ body{
     height: 100%;
 }
 
+.wrapper{
+    overflow-x: hidden;
+}
+
 body {
     background-color: #fff;
     font-size: 14px;
     line-height: 1.4;
+    @extend %opensans-400;
     color: $default;
-    @extend %opensans-500;
     display: flex;
     flex-direction: column;
 }
