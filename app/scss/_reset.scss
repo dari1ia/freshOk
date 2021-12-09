@@ -43,6 +43,17 @@ select {
     font: inherit;
   }
 
+address {
+    font-style: normal;
+}
+
+button {
+    display: inline-block;
+    cursor: pointer;
+    appearance: none;
+    border: none;
+}
+
 a {
     text-decoration: none;
     color: inherit;    

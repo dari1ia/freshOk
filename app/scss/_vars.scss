@@ -1,0 +1,72 @@
+$accent: #63A60E;
+$accent-2: #E0EDCF;
+$accent-dark: #4D800C;
+$default: #121212;
+$title: #505050;
+$topbottom: #31352B;
+$white: #fff;
+$black: #000;
+$number: #CF3E3B;
+$subtitle: rgba(207, 62, 59, 1);
+$fav: rgba(255, 184, 0, 1);
+$border: rgba(193, 193, 193, 1);
+
+%lato-500{
+    font-family: 'Lato-Regular', sans-serif;
+    font-weight: 500;
+}
+
+%lato-700{
+    font-family: 'Lato-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%opensans-400{
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%opensans-300{
+    font-family: 'OpenSans-Light', sans-serif;
+    font-weight: 300;
+}
+
+%opensans-600{
+    font-family: 'OpenSans-SemiBold', sans-serif;
+    font-weight: 600;
+}
+
+%opensans-700{
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%roboto-500{
+    font-family: 'Roboto-Medium', sans-serif;
+    font-weight: 500;
+}
+
+%roboto-400{
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%ruda-900{
+    font-family: 'Ruda-Black', sans-serif;
+    font-weight: 900;
+}
+
+%ruda-700{
+    font-family: 'Ruda-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%ruda-400{
+    font-family: 'Ruda-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%ruda-600{
+    font-family: 'Ruda-SemiBold', sans-serif;
+    font-weight: 600;
+}
